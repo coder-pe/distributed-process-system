@@ -40,9 +40,16 @@ STATIC_LIB = $(BUILD_DIR)/libdistributed.a
 PLUGINS = validation enrichment aggregation audit failure_simulator
 PLUGIN_TARGETS = $(addprefix $(PLUGIN_DIR)/lib, $(addsuffix .so, $(PLUGINS)))
 
-.PHONY: all clean setup structure help modules main plugins tests 
+.PHONY: all clean setup structure help modules main plugins tests build-plugins
 
 all: setup structure modules main plugins
+
+# Build plugins using the plugin build script
+build-plugins:
+	@echo "Building plugins using build script..."
+	@./scripts/build/build_plugins.sh all
+
+plugins: build-plugins
 
 help:
 	@echo "=== Sistema Distribuido Modularizado ==="
@@ -51,7 +58,8 @@ help:
 	@echo "  make structure    - Crear estructura de directorios"
 	@echo "  make modules      - Compilar módulos del sistema"
 	@echo "  make main         - Compilar ejecutable principal"
-	@echo "  make plugins      - Compilar plugins de ejemplo"
+	@echo "  make plugins      - Compilar todos los plugins"
+	@echo "  make build-plugins - Compilar plugins usando script dedicado"
 	@echo "  make tests        - Compilar herramientas de testing"
 	@echo ""
 	@echo "Desarrollo:"
@@ -63,6 +71,12 @@ help:
 	@echo "Testing:"
 	@echo "  make test-modules - Probar módulos individuales"
 	@echo "  make test-system  - Probar sistema completo"
+	@echo ""
+	@echo "Plugin Development:"
+	@echo "  ./scripts/build/build_plugins.sh all    - Build all plugins"
+	@echo "  ./scripts/build/build_plugins.sh list   - List available plugins"
+	@echo "  ./scripts/build/build_plugins.sh clean  - Clean plugin binaries"
+	@echo "  cd plugins && make all                   - Alternative build method"
 
 setup:
 	@mkdir -p $(SRC_DIR) $(INCLUDE_DIR) $(BUILD_DIR) $(BIN_DIR) $(PLUGIN_DIR) $(TEST_DIR) $(LOGS_DIR)
@@ -1409,6 +1423,8 @@ docs:
 clean:
 	rm -rf $(BUILD_DIR)/* $(BIN_DIR)/* $(INCLUDE_DIR)/*
 	rm -f .depend
+	@echo "Cleaning plugins..."
+	@./scripts/build/build_plugins.sh clean || rm -f $(PLUGIN_DIR)/*.so
 
 .PHONY: test-modules
 test-modules: modules
