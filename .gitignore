@@ -32,6 +32,6 @@ dependencies.dot
 dependencies.png
 
 #IA
-CLAUDE
-GROK
-GPT*
+CLAUDE.md
+GROK.md
+GPT*.md
