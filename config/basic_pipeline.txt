@@ -1,0 +1,5 @@
+# Configuración básica del pipeline distribuido
+# Formato: nombre|biblioteca|parámetros|habilitado|política_failover|max_retries|timeout_ms
+validation|./plugins/libvalidation.so|strict_mode=false|true|RETRY_WITH_BACKOFF|3|10000
+enrichment|./plugins/libenrichment.so|factor=1.1|true|SKIP_AND_CONTINUE|2|5000
+aggregation|./plugins/libaggregation.so|compute_stats=true|true|ISOLATE_AND_CONTINUE|1|15000

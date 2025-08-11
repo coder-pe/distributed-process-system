@@ -1,0 +1,37 @@
+# Compiled binaries
+build/
+bin/
+*.o
+*.so
+*.a
+
+# Logs
+logs/*.log
+logs/*.csv
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# IDE files
+.vscode/
+.clangd/
+compile_commands.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing artifacts
+test_results/
+coverage/
+
+# Dependencies
+dependencies.dot
+dependencies.png
+
+#IA
+CLAUDE
+GROK
+GPT*
