@@ -1,0 +1,50 @@
+GNU AFFERO GENERAL PUBLIC LICENSE
+Version 3, 19 November 2007
+
+Copyright (C) 2025 Miguel Mamani <miguel.coder.per@gmail.com>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+ADDITIONAL TERMS:
+
+1. NETWORK USE IS DISTRIBUTION: If you run a modified version of this software
+   on a server and let other users interact with it there, your server must
+   also allow them to download the source code corresponding to the modified
+   version running there.
+
+2. STRONG COPYLEFT: Any work that uses, incorporates, or is derived from this
+   software must also be licensed under the GNU AGPL v3 or a compatible license.
+
+3. NO PROPRIETARY FORKS: You may not create proprietary derivatives of this
+   software. All modifications and derivative works must remain open source
+   under the same license terms.
+
+4. ATTRIBUTION REQUIRED: You must retain this copyright notice and license
+   information in all copies or substantial portions of the software.
+
+5. TRADEMARK PROTECTION: The name "Miguel Mamani" and any associated trademarks
+   may not be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+For questions about licensing or commercial use, contact:
+Miguel Mamani
+Email: miguel.coder.per@gmail.com
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
